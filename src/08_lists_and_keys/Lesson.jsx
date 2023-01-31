@@ -7,9 +7,7 @@ const Tab2 = () => <h1>Text of tab2</h1>;
 
 const Tab3 = () => <h1>Text of tab3</h1>;
 
-const people = ['Jack', 'Max', 'Leo', 'Alex'];
-
-
+const people = ["Jack", "Max", "Leo", "Alex"];
 
 class App extends Component {
   state = {
@@ -27,11 +25,14 @@ class App extends Component {
     return (
       <Fragment>
         {TABS_BTN.map(({ dataName, title, icon }) => (
-            <button
-                key={`${dataName}-${title}`}
-                data-name={dataName}
-                onClick={this.handleTab}
-            >{icon}{title}</button>
+          <button
+            key={`${dataName}-${title}`}
+            data-name={dataName}
+            onClick={this.handleTab}
+          >
+            {icon}
+            {title}
+          </button>
         ))}
         {activeTab === 1 ? <Tab1 /> : activeTab === 2 ? <Tab2 /> : <Tab3 />}
         <div>
@@ -40,9 +41,9 @@ class App extends Component {
           }`}
         </div>
         <ul>
-            {people.map((person, index) => (
-                <li key={index}>{person}</li>
-            ))}
+          {people.map((person, index) => (
+            <li key={index}>{person}</li>
+          ))}
         </ul>
       </Fragment>
     );
