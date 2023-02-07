@@ -5,12 +5,15 @@ export default class NewPost extends Component {
         const { author, created_at, num_comments, title, points, url } = this.props;
         return (
             <li>
-                <h2>{author}</h2>
-                <h3>{created_at}</h3>
-                <span>{num_comments}</span>
-                <h2>{title}</h2>
+                <a href={url}>{title}</a>
+                <br />
                 <span>{points}</span>
-                <p>{url}</p>
+                |
+                <span>{num_comments}</span>
+                |
+                <span>{created_at}</span>
+                |
+                <span>{author}</span>
             </li>
         )
     }
