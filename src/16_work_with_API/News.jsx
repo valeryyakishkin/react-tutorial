@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import NewPost from "./NewPost";
+import Title from "./Title";
+import Input from "./Input";
 
 const BASE_PATH = "https://hn.algolia.com/api/v1";
 const SEARCH_PATH = "/search";
